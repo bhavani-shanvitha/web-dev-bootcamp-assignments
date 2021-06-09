@@ -1,0 +1,27 @@
+<!--span tag demo-->
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>updation</title>
+		<style>
+		.letter{
+			background-color: pink;
+		}
+	</style>
+	</head>
+	<body>
+		<h2>welcome to html</h2>
+		<p>
+			<span id="s1" class="letter">bootcamp</span>
+			is going
+			<span id="s2" class="letter"> good</span>
+		</p>
+		<button type="button" onclick="changetext()">change text</button>
+		<script>
+			//posting data from javascript to html
+			function changetext(){
+				document.getElementById('s1').innerHTML ="madblocks bootcamp";
+			}
+		</script>
+	</body>
+</html>

@@ -1,8 +1,8 @@
 <?php 
-    $email=$_POST['emailid'];
+    $emailid=$_POST['emailid'];
 
   $server="localhost:3306";
-  $dbname="mysql";
+  $dbname="samples";
   $username="root";
   $password="";
 
@@ -18,7 +18,7 @@
   echo '<br/>';
   if($sFlag==1) {
 
-    $sql="INSERT INTO email_form(email)VALUES('".$email."');";
+    $sql="INSERT INTO email_form(email_id)VALUES('".$emailid."');";
     $a=mysqli_query($conn,$sql);
 
     if($a) {

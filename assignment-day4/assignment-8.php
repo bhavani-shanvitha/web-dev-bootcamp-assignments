@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Tech Support Table</title>
+    <title>email id Table</title>
   </head>
   <body>
     <table border="1">
       <tr>
         <th>ID</th>
-        <th>Email ID</th>
+        <th>Email_ID</th>
       </tr>
     <?php
       
@@ -15,14 +15,14 @@
       $server="localhost:3306";
       $username="root";
       $password="";
-      $dbname="mysql";
+      $dbname="samples";
 
       $conn=mysqli_connect($server,$username,$password,$dbname);  
       if(!$conn) {
         echo 'Connection Failure';
       }
 
-      $sql="SELECT * FROM email_form";
+      $sql="SELECT * FROM email_id";
 
       $data=mysqli_query($conn,$sql);
       if(mysqli_num_rows($data)>0) {
@@ -30,7 +30,7 @@
     ?>
           <tr>
             <td><?php echo $row['ID'];?></td>
-            <td><?php echo $row['email'];?></td>
+            <td><?php echo $row['email_id'];?></td>
           </tr>
     <?php      
         }
